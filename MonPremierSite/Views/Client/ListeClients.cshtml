@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MonPremierSite.Models.Clients>
+
+@{
+    ViewBag.Title = "ListeClients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListeClients</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (MonPremierSite.Models.Client client in ViewData["Clients"] as List<MonPremierSite.Models.Client>)
+    {
+        <tr>
+            <td>@client.FirstName</td>
+            <td>@client.LastName</td>
+            <td>@client.Username</td>
+            <td>@client.Email</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=client.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=client.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=client.Id })
+            </td>
+        </tr>
+    }
+
+</table>
