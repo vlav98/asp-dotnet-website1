@@ -7,25 +7,19 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="text-center">
-    <div class="masthead navbar navbar-inverse navbar-fixed-top mb-auto">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Drink your tea", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Clients", "ListeClients", "Clients")</li>
-                </ul>
-            </div>
+<body>
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        @Html.ActionLink("Drink your tea", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("About", "About", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", new object { }, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Client", "ListeClients", "Client", new object { }, new { @class = "nav-link" })</li>
+            </ul>
         </div>
     </div>
     <div role="main" class="container body-content inner cover">
@@ -33,7 +27,7 @@
             @RenderBody()
         </div>
     </div>
-    <div class="mastfoot mt-auto fixed-bottom footer">
+    <div class="mastfoot mt-auto fixed-bottom footer text-center">
         <div class="inner">
             <p>&copy; Valentine Lav @DateTime.Now.Year</p>
         </div>

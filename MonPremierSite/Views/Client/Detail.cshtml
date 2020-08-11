@@ -4,12 +4,15 @@
 @model MonPremierSite.Models.Client
 
 <div>
+    <h2 class="mt-5">ListeClients</h2>
     <div class="card">
         <div class="card-body">
-            @ViewData["FirstName"]
-            @ViewData["LastName"]
-            @ViewData["Username"]
-            @ViewData["Email"]
+            <p class="card-text">
+                @ViewData["FirstName"]<br>
+                @ViewData["LastName"] <br>
+                @ViewData["Username"] <br>
+                @ViewData["Email"]
+            </p>            
         </div>
     </div>
 </div>
