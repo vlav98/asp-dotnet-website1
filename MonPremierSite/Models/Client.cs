@@ -12,7 +12,6 @@ namespace MonPremierSite.Models
         public string LastName { get; set; }
         public string Username{ get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
     }
 
     public class Clients
@@ -21,10 +20,10 @@ namespace MonPremierSite.Models
         {
             return new List<Client>
             {
-                new Client { Id = 1, FirstName = "Nicolas", LastName = "N", Username = "nicolasn", Email = "nicolas@gmail.com", Password = "abcdef" },
-                new Client { Id = 2, FirstName = "Delphine", LastName = "N", Username = "delphinen", Email = "delphine@gmail.com", Password = "abcdef" },
-                new Client { Id = 3, FirstName = "Jérémie", LastName = "N", Username = "jeremien", Email = "jeremie@gmail.com", Password = "abcdef" },
-                new Client { Id = 4, FirstName = "Timéo", LastName = "N", Username = "timeon", Email = "timeo@gmail.com", Password = "abcdef" }
+                new Client { Id = 1, FirstName = "Nicolas", LastName = "N", Username = "nicolasn", Email = "nicolas@gmail.com"},
+                new Client { Id = 2, FirstName = "Delphine", LastName = "N", Username = "delphinen", Email = "delphine@gmail.com"},
+                new Client { Id = 3, FirstName = "Jérémie", LastName = "N", Username = "jeremien", Email = "jeremie@gmail.com"},
+                new Client { Id = 4, FirstName = "Timéo", LastName = "N", Username = "timeon", Email = "timeo@gmail.com"}
             };
         }
     }
